@@ -1,0 +1,59 @@
+string text = Console.ReadLine();
+char c1 = Convert.ToChar(Console.ReadLine());
+string[] words = text.Split(c1);
+
+foreach (string s in words)
+{
+    Console.WriteLine(s);
+}
+
+
+
+string stroca = Console.ReadLine();
+char symbol = Convert.ToChar(Console.ReadLine());
+string result = "";
+int count = 0;
+
+foreach (char c in stroca)
+{
+    if (c == symbol)
+    {
+        count++;
+        result += char.ToUpper(symbol);
+    }
+    else
+    {
+        result += char.ToLower(c);
+    }
+}
+
+Console.WriteLine(count);
+Console.WriteLine(result);
+
+
+Console.WriteLine("");
+
+string alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+string  word = Console.ReadLine().ToUpper();
+int num = Convert.ToInt32(Console.ReadLine());
+string resultat = "";
+
+foreach (char b in word)
+{
+    int index = alphabet.IndexOf(b);
+    if (index != -1)
+    {
+        int newIndex = (index + num) % alphabet.Length;
+        resultat += alphabet[newIndex];
+    }
+    else
+    {
+        resultat += b;
+    }
+}
+Console.Write(resultat);
+
+
+
+
+
